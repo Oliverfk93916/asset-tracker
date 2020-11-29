@@ -1,1 +1,1 @@
-export default 'https://asset-tracker.netlify.app'
+export default 'http://localhost:1337'
