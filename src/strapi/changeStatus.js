@@ -1,6 +1,9 @@
 
 import axios from 'axios'
 import url from './URL'
+import {navigate,link} from 'svelte-routing'
+
+let refresh = localStorage.getItem('url')
 
 export async function changeStatus(item, itemId, value,details){
 
@@ -44,6 +47,7 @@ switch (value){
  //make request
 	const response = await axios.put(`${url}/asset-data/${itemId}`,item)
 	.catch(error => console.log(error))
+    navigate(refresh)
 }
 
 

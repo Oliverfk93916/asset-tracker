@@ -2,6 +2,7 @@
 <script>
 	// pages
 	import Login from './pages/Login.svelte'
+	import Home from './pages/Home.svelte'
 	import AssetTemplate from './pages/AssetTemplate.svelte'
 	import Asset from './pages/Asset.svelte'
 	import Alert from './Alert.svelte'
@@ -15,6 +16,7 @@
   {#if $globalStore.alert}
   <Alert />
   {/if}
+	<Route path="/" component={Home} />
 	<Route path="/login" component={Login} />
 	<Route path="/asset/:id" component={AssetTemplate} />
 	<Route path="/asset" component={Asset} />
