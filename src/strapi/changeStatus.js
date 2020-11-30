@@ -2,7 +2,7 @@
 import axios from 'axios'
 import url from './URL'
 
-export async function changeStatus(item, itemId, value){
+export async function changeStatus(item, itemId, value,details){
 
 const options = { 
 	day: '2-digit',
@@ -14,7 +14,6 @@ const options = {
 let numberOfRepairs = item.numberOfRepairs
 let dateOfDeath = item.dateOfDeath
 let dateofRepair = item.dateofRepair
-let details = item.details
 let now = new Date().toLocaleDateString('en-GB', options)
 
 
@@ -29,7 +28,8 @@ switch (value){
     break;   
     case 'No':
     	dateOfDeath = ''
-    	item = {...item,dateOfDeath}
+        item.details = details
+    	item = {...item,dateOfDeath,details}
     break;    
     case 'Dead':
     	dateOfDeath = now

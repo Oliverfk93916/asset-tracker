@@ -130,6 +130,11 @@ button:not(:disabled):active {
   margin-top: 10rem;
   max-width: 35rem;
 }
+.form-details{
+  max-width: 35rem;
+  width: var(--smallWidth);
+  margin: 0 auto;
+}
 .form-control label {
   display: block;
   color: white;
@@ -148,4 +153,12 @@ button:not(:disabled):active {
   text-transform: capitalize;
   border-radius: var(--mainBorderRadius);
   box-shadow: var(--lightShadow);
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
 }
