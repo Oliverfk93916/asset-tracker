@@ -131,9 +131,9 @@ button:not(:disabled):active {
   max-width: 35rem;
 }
 .form-details{
-  max-width: 35rem;
-  width: var(--smallWidth);
-  margin: 0 auto;
+  margin-left: 25%;
+    margin-right: 25%;
+      width: 50%;
 }
 .form-control label {
   display: block;

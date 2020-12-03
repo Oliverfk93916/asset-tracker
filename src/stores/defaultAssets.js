@@ -14,13 +14,4 @@ async function setData(){
 		store.set(assets)
 	}
 }
-
-// function flattenProducts(data){
-// 	return data.map(item => {
-// 		//let image = `${url}${item.image.url}`
-// 		// let image = item.image.url
-// 		return {...item}
-// 	})
-// }
-
 export default store

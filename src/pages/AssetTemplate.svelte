@@ -4,13 +4,14 @@
 	import assets from '../stores/defaultAssets'
 	import {link,navigate} from 'svelte-routing'
 	import {findId} from '../stores/asset'
-	import {onMount} from 'svelte'
+	import {onMount, afterUpdate, onDestroy} from 'svelte'
 	import user from '../stores/user'
+	import {fly, fade, slide} from 'svelte/transition'
 
 	let details = ''
 	$: noClicked = false
-	$: asset = $assets.find(item => item.assetId === id)
 	$: isEmpty = !details
+	$: asset = $assets.find(item => item.assetId === id)
 
 	onMount(()=>{
 		let url = location.href
@@ -20,6 +21,7 @@
 			return
 		}
 	})
+
 	function formToggle() {
  		 noClicked = !noClicked
 	}
@@ -39,18 +41,19 @@
 	<div class="btn-group" style="padding-top: 5%">
 		<button on:click={()=>findId(id,'Yes')}>Yes</button>
 		<button on:click={()=>formToggle()}>No</button>
-		{#if noClicked}
-		<section class="form-details">
-			<h2 class="section-title">what's the issue?</h2>
-		<form class="login-form" on:submit|preventDefault={findId(id,'No', details) && formToggle()}>
+	</div>
+			{#if noClicked}
+			<section class="form-details" transition:fly={{y:-200}} >
+				<h2 class="section-title">what's the issue?</h2>
+			<form class="login-form" on:submit|preventDefault={findId(id,'No', details) && formToggle()}>
 		<div class="form-control">
 			<label for="details">Details</label>
 			<input type="text" id="details" bind:value={details}>
-		</div>
-		<button type="submit" class="btn-group button" disabled={isEmpty}>Submit </button>
+		<button type="submit" disabled={isEmpty}>Submit </button>
 		</form>
 	</section>
 		{/if}
+			<div class="btn-group">
 		<button on:click={()=>findId(id,'Dead')}>Dead</button>
 	</div>
 {/if}
