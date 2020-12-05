@@ -5,8 +5,10 @@
 	import Home from './pages/Home.svelte'
 	import AssetTemplate from './pages/AssetTemplate.svelte'
 	import Asset from './pages/Asset.svelte'
-	import Alert from './Alert.svelte'
 	import Choices from './pages/Choices.svelte'
+	import PartsTemplate from './pages/PartsTemplate.svelte'
+	import Alert from './Alert.svelte'
+	
 	// router
 	import { Router, Route, Link } from "svelte-routing"
 	import globalStore from './stores/globalStore'
@@ -22,4 +24,5 @@
 	<Route path="/asset/:id" component={AssetTemplate} />
 	<Route path="/asset" component={Asset} />
 	<Route path=/:id component={Choices} />
+	<Route path=/parts/:id component={PartsTemplate} />
 </Router>
