@@ -32,15 +32,15 @@
 	<h1>Loading</h1>
 	<h2>Perhaps this asset doesn't exist...</h2>
 {:else}
-	<h1>This assets status is</h1>
+	<h1>Current status is..</h1>
 	<p>{asset.working}</p>
 	{#if asset.working === 'No'}
 	<p>{asset.details}</p>
 	{/if}
-	<h2>would you like to change it?</h2>
-	<div class="btn-group" style="padding-top: 5%">
-		<button on:click={()=>findId(id,'Yes')}>Yes</button>
-		<button on:click={()=>formToggle()}>No</button>
+	<h2>Change to</h2>
+	<div class="btn-group">
+		<button on:click={()=>findId(id,'Yes')}>Working</button>
+		<button on:click={()=>formToggle()}>Not working</button>
 	</div>
 			{#if noClicked}
 			<section class="form-details" transition:fly={{y:-200}} >
