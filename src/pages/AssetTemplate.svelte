@@ -28,21 +28,6 @@
  		 noClicked = !noClicked
 	}
 
-	// let status = ''
-	// switch (asset.working){
-	// 	case 'Yes':
-	// 		status = 'Working'
-	// 		break;
-	// 	case 'No':
-	// 	status = 'Not Working'
-	// 	break;
-	// 	case 'Dead':
-	// 	status = 'Dead'
-	// 	break;
-	// 	default: 
-	// 	status = ''
-	// }
-
 </script>
 {#if asset}
 	<h1>Current status is..</h1>

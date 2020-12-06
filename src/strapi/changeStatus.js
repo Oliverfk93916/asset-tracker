@@ -35,7 +35,12 @@ switch (value){
     case 'Dead':
     	dateOfDeath = now
     	item = {...item,dateOfDeath}
-    break;    
+    break;
+    case 'Stripped':
+        if(dateOfDeath === ''){
+        dateOfDeath = now
+        item = {...item,dateOfDeath}
+    }
     default:
     	console.log('Dunno m9');
     break;
