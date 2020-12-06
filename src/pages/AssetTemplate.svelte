@@ -28,11 +28,23 @@
  		 noClicked = !noClicked
 	}
 
+	// let status = ''
+	// switch (asset.working){
+	// 	case 'Yes':
+	// 		status = 'Working'
+	// 		break;
+	// 	case 'No':
+	// 	status = 'Not Working'
+	// 	break;
+	// 	case 'Dead':
+	// 	status = 'Dead'
+	// 	break;
+	// 	default: 
+	// 	status = ''
+	// }
+
 </script>
-{#if !asset}
-	<h1>Loading</h1>
-	<h2>Perhaps this asset doesn't exist...</h2>
-{:else}
+{#if asset}
 	<h1>Current status is..</h1>
 	<p>{asset.working}</p>
 	{#if asset.working === 'No'}
