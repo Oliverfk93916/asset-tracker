@@ -21,12 +21,13 @@ let now = new Date().toLocaleDateString('en-GB', options)
 
 switch (value){
 	case 'Yes':
+        reload = false
     	if (item.working != 'Yes'){
         	numberOfRepairs += 1
        		dateofRepair = now
         	dateOfDeath =''
         	item = {...item,numberOfRepairs,dateofRepair,dateOfDeath}
-            reload = false
+            
         }
     break;   
     case 'No':

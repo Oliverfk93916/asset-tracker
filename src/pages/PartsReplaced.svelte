@@ -20,5 +20,5 @@
 </label>
 {/each}
 <div class="btn-group">
-<button type="submit" on:click={findId(id,'Yes') &&takeFromStock(replace,id) && navigate(`/${id}`)}>Submit</button>
+<button type="submit" on:click|preventDefault={takeFromStock(replace,id)}>Submit</button>
 </div>
