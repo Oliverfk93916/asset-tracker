@@ -29,8 +29,11 @@
 		if(button === 'no'){
  		 noClicked = !noClicked
  		 yesClicked = false
+		} else if (button === 'yes'){
+			noClicked = false
+			yesClicked = !yesClicked
+			}
 		}
-	}
 
 </script>
 {#if asset}
@@ -40,7 +43,18 @@
 	{/if}
 	<h2>Change to</h2>
 	<div class="btn-group">
-		<button on:click={()=>findId(id,'Yes')}>Working</button>
+		<button on:click={()=>formToggle('yes')}>Working</button>
+	</div>
+	{#if yesClicked}
+			<section class="form-details" transition:fly={{y:-200}} >
+				<h2 class="section-title">Did you replace anything?</h2>
+			</section>
+			<div class="btn" transition:fly={{y:-200}}>
+			<button type="button" class="btn2" on:click={navigate(`/yes/${id}`)}>Yes </button>
+			<button type="button" class="btn2" on:click={()=>findId(id,'Yes')}>No </button>
+			</div>
+		{/if}
+	<div class="btn-group">
 		<button on:click={()=>formToggle('no')}>Not Working</button>
 	</div>
 			{#if noClicked}

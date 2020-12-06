@@ -31,7 +31,7 @@
 </label>
 {/each}
 <div class="form-control">
-<p>Clicking submit means this controller no longer exists</p>
+<p>Clicking submit means this asset no longer exists</p>
 <div class="btn-group">
 <button type="submit" on:click|preventDefault={addToStock(replace) && findId(id,'Stripped')}>Submit</button>
 </div>

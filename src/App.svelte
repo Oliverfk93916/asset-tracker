@@ -7,6 +7,7 @@
 	import Asset from './pages/Asset.svelte'
 	import Choices from './pages/Choices.svelte'
 	import PartsTemplate from './pages/PartsTemplate.svelte'
+	import PartsReplaced from './pages/PartsReplaced.svelte'
 	import Alert from './Alert.svelte'
 	
 	// router
@@ -25,4 +26,5 @@
 	<Route path="/asset" component={Asset} />
 	<Route path=/:id component={Choices} />
 	<Route path=/parts/:id component={PartsTemplate} />
+	<Route path=/yes/:id component={PartsReplaced} />
 </Router>
