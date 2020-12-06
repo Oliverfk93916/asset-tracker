@@ -3,12 +3,14 @@
 	import {link,navigate} from 'svelte-routing'
 	import parts from '../stores/defaultParts'
 	import {takeParts} from '../strapi/takeParts'
+	import {addToStock} from '../strapi/addToStock'
 
 	$: part = $parts.filter(item => item.type === takeParts(id.slice(0,3)) && item.number < 28)
 	let replace = []
+
 	function join(replace) {
 		if (replace.length === 1) return replace[0];
-		return `${replace.slice(0, -1).join(', ')} and ${replace[replace.length - 1]}`;
+		return `${replace.slice(0, -1).join(', ')}, ${replace[replace.length - 1]}`;
 	}
 
 </script>
@@ -19,10 +21,10 @@
     <input id={`chk${i}`} type="checkbox" bind:group={replace} value={item.part}> {item.part}
 </label>
 {/each}
-{#if replace.length > 0}
-{console.log(join(replace))}
+<!-- {#if replace.length > 0}
+{console.log(replace)}
 {/if}
-<div class="form-control">
-<p>clicking submit means this controller no longer exists</p>
-<button type="submit" >submit</button>
+ --><div class="form-control">
+<p>Clicking submit means this controller no longer exists</p>
+<button type="submit" on:click|preventDefault={addToStock(replace)}>Submit</button>
 </div>
