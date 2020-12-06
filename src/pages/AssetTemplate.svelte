@@ -9,8 +9,10 @@
 	import {fly, fade, slide} from 'svelte/transition'
 
 	let details = ''
-	$: noClicked = false
 	$: isEmpty = !details
+
+	$: noClicked = false
+
 	$: asset = $assets.find(item => item.assetId === id)
 
 	onMount(()=>{
@@ -27,7 +29,6 @@
 	}
 
 </script>
-
 {#if !asset}
 	<h1>Loading</h1>
 	<h2>Perhaps this asset doesn't exist...</h2>
@@ -40,7 +41,7 @@
 	<h2>Change to</h2>
 	<div class="btn-group">
 		<button on:click={()=>findId(id,'Yes')}>Working</button>
-		<button on:click={()=>formToggle()}>Not working</button>
+		<button on:click={()=>formToggle()}>Not Working</button>
 	</div>
 			{#if noClicked}
 			<section class="form-details" transition:fly={{y:-200}} >
