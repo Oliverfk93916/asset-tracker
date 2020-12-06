@@ -5,6 +5,7 @@ import {navigate,link} from 'svelte-routing'
 
 export async function changeStatus(item, itemId, value,details){
 
+
 const options = { 
 	day: '2-digit',
 	month: '2-digit',
@@ -12,11 +13,11 @@ const options = {
 };
 
 //variables
+let reload = true
 let numberOfRepairs = item.numberOfRepairs
 let dateOfDeath = item.dateOfDeath
 let dateofRepair = item.dateofRepair
 let now = new Date().toLocaleDateString('en-GB', options)
-
 
 switch (value){
 	case 'Yes':
@@ -25,6 +26,7 @@ switch (value){
        		dateofRepair = now
         	dateOfDeath =''
         	item = {...item,numberOfRepairs,dateofRepair,dateOfDeath}
+            reload = false
         }
     break;   
     case 'No':
@@ -50,7 +52,7 @@ switch (value){
  //make request
 	const response = await axios.put(`${url}/asset-data/${itemId}`,item)
 	.catch(error => console.log(error))
-    location.reload(true)
+    location.reload(reload)
 }
 
 

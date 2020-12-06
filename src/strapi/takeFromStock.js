@@ -19,7 +19,5 @@ export async function takeFromStock(items,id){
 		.catch(error => console.log(error))
 		}
 	}
-	console.log(id)
-	navigate(`/${id}`)
 }
 
