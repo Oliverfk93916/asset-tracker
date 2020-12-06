@@ -12,6 +12,7 @@
 	$: isEmpty = !details
 
 	$: noClicked = false
+	$: yesClicked = false
 
 	$: asset = $assets.find(item => item.assetId === id)
 
@@ -24,26 +25,28 @@
 		}
 	})
 
-	function formToggle() {
+	function formToggle(button) {
+		if(button === 'no'){
  		 noClicked = !noClicked
+ 		 yesClicked = false
+		}
 	}
 
 </script>
 {#if asset}
-	<h1>Current status is..</h1>
-	<p>{asset.working}</p>
+	<h1>Status: {asset.working}</h1>
 	{#if asset.working === 'No'}
-	<p>{asset.details}</p>
+	<p>Issue: {asset.details}</p>
 	{/if}
 	<h2>Change to</h2>
 	<div class="btn-group">
 		<button on:click={()=>findId(id,'Yes')}>Working</button>
-		<button on:click={()=>formToggle()}>Not Working</button>
+		<button on:click={()=>formToggle('no')}>Not Working</button>
 	</div>
 			{#if noClicked}
 			<section class="form-details" transition:fly={{y:-200}} >
 				<h2 class="section-title">what's the issue?</h2>
-			<form class="login-form" on:submit|preventDefault={findId(id,'No', details) && formToggle()}>
+			<form class="login-form" on:submit|preventDefault={findId(id,'No', details) && formToggle('no')}>
 		<div class="form-control">
 			<label for="details">Details</label>
 			<input type="text" id="details" bind:value={details}>

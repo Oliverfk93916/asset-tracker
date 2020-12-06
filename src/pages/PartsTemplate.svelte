@@ -20,8 +20,8 @@
 </script>
 {#if asset}
 {#if asset.working === 'Stripped'}
-<h1>This item has been stripped</h1>
-<h2>Thank you</h2>
+<h1>Thank you for stripping this item</h1>
+<h2>Jesus loves you</h2>
 {:else}
 <h2>{`You are stripping ${id}`}</h2>
 <h1>Please take</h1>
