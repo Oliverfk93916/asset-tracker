@@ -65,7 +65,21 @@ a:visited {
 }
 
 label {
-	display: block;
+	 display: block;
+  position: relative;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  cursor: pointer;
+  font-size: 28px;
+  color: white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: inherit; 
+  margin-left: 30%;
+  margin-right: 25%;
+  width:50%;
 }
 
 input, button, select, textarea {
@@ -162,3 +176,23 @@ button:not(:disabled):active {
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 28px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: inherit;  
+}
+
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px
+ }

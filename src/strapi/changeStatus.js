@@ -2,7 +2,6 @@
 import axios from 'axios'
 import url from './URL'
 import {navigate,link} from 'svelte-routing'
-import getData from '../strapi/getData'
 
 export async function changeStatus(item, itemId, value,details){
 

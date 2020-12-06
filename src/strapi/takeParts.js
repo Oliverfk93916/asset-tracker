@@ -1,9 +1,16 @@
 import axios from 'axios'
 import url from './URL'
+import getParts from './getParts'
 
-export async function takeParts(id){
+export function takeParts(id){
 	switch(id){
 		case 'cnt':
-		console.log('controller')
+	 return 'controller'
+	 break;
+	 case 'hds':
+	 return 'headset'
+	 break;
+	 default:
+	 return ''
 	}
 }
