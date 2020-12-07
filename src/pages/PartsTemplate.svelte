@@ -6,10 +6,22 @@
 	import {addToStock} from '../strapi/addToStock'
 	import {findId} from '../stores/asset'
 	import assets from '../stores/defaultAssets'
+	import {onMount} from 'svelte'
+	import user from '../stores/user'
+	
+	onMount(()=>{
+		let url = location.href
+		localStorage.setItem("url",url)
+		if(!$user.jwt){
+			navigate('/login')
+			return
+		}
+	})
 
 	$: asset = $assets.find(item => item.assetId === id)
 
 	$: part = $parts.filter(item => item.type === takeParts(id.slice(0,3)) && item.number < 28)
+
 	let replace = []
 
 	function join(replace) {

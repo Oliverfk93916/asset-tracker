@@ -7,6 +7,17 @@
 	import {findId} from '../stores/asset'
 	import {takeFromStock} from '../strapi/takeFromStock'
 	import {navigate,link} from 'svelte-routing'
+	import {onMount} from 'svelte'
+	import user from '../stores/user'
+	
+	onMount(()=>{
+		let url = location.href
+		localStorage.setItem("url",url)
+		if(!$user.jwt){
+			navigate('/login')
+			return
+		}
+	})
 
 	$: part = $parts.filter(item => item.type === takeParts(id.slice(0,3)))
 	let replace = []

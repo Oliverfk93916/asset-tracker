@@ -1,9 +1,21 @@
 <script>
-	import {link,navigate} from 'svelte-routing'
 	export let id
+
+	import {link,navigate} from 'svelte-routing'
 	import assets from '../stores/defaultAssets'
+	import {onMount, afterUpdate, onDestroy} from 'svelte'
+	import user from '../stores/user'
 
 	$: asset = $assets.find(item => item.assetId === id)
+
+	onMount(()=>{
+		let url = location.href
+		localStorage.setItem("url",url)
+		if(!$user.jwt){
+			navigate('/login')
+			return
+		}
+	})
 
 </script>
 {#if !asset}
