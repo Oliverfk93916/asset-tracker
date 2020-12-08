@@ -6,7 +6,7 @@
 
 <nav class="navbar">
 	<div class="nav-center">
-<button class="btn-sidebar-toggle" on:click={() => navigate(`/`)}>
+<button class="btn-home" on:click={() => navigate(`/`)}>
 	<i class="fas fa-home"></i>
 </button>
 </div>
