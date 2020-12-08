@@ -207,3 +207,34 @@ input[type="checkbox"] {
   width: 25px;
   height: 25px
  }
+
+ .navbar {
+  background: rgb(26, 26, 26);
+  height: 5rem;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--lightShadow);
+}
+.nav-container {
+  width: 100%;
+  position: relative;
+}
+.nav-center {
+  width: var(--smallWidth);
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn-sidebar-toggle{
+   background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}

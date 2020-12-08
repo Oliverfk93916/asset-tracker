@@ -1,6 +1,7 @@
 
 <script>
 	// pages
+	import Navbar from './components/Navbar.svelte'
 	import Login from './pages/Login.svelte'
 	import Home from './pages/Home.svelte'
 	import AssetTemplate from './pages/AssetTemplate.svelte'
@@ -17,6 +18,7 @@
 </script>
 
 <Router>
+	<Navbar />
   {#if $globalStore.alert}
   <Alert />
   {/if}
