@@ -234,11 +234,10 @@ input[type="checkbox"] {
   justify-content: space-between;
 }
 .btn-home{
-  margin-top: 20px;
+  margin-top: 1rem;
   background: transparent;  
   border:none;
-  font-size: 1.3rem;
   cursor: pointer;
   color:rgb(231,95,133);
-  font-size: 30px;
+  font-size: 1.6rem;
 }
