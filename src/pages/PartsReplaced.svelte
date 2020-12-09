@@ -9,6 +9,7 @@
 	import {navigate,link} from 'svelte-routing'
 	import {onMount} from 'svelte'
 	import user from '../stores/user'
+	import Navbar from '../components/Navbar.svelte'
 	
 	onMount(()=>{
 		let url = location.href
@@ -22,7 +23,7 @@
 	$: part = $parts.filter(item => item.type === takeParts(id.slice(0,3)))
 	let replace = []
 </script>
-
+<Navbar id="{id}" />
 <h1>What did you replace?</h1>
 <h2>Select all that apply</h2>
 {#each part as item, i}

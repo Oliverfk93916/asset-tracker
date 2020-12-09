@@ -5,6 +5,7 @@
 	import assets from '../stores/defaultAssets'
 	import {onMount, afterUpdate, onDestroy} from 'svelte'
 	import user from '../stores/user'
+	import Navbar from '../components/Navbar.svelte'
 
 	$: asset = $assets.find(item => item.assetId === id)
 
@@ -18,6 +19,7 @@
 	})
 
 </script>
+<Navbar id="{id}" />
 {#if !asset}
 	<h1>Loading...</h1>
 	<h2>Please wait</h2>

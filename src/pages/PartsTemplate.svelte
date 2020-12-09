@@ -8,6 +8,7 @@
 	import assets from '../stores/defaultAssets'
 	import {onMount} from 'svelte'
 	import user from '../stores/user'
+	import Navbar from '../components/Navbar.svelte'
 	
 	onMount(()=>{
 		let url = location.href
@@ -30,6 +31,7 @@
 	}
 
 </script>
+<Navbar id="{id}" />
 {#if asset}
 {#if asset.working === 'Stripped'}
 <h1>Thank you for stripping this item</h1>

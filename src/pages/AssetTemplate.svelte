@@ -1,6 +1,7 @@
 <script>
 	export let id
 	// global store
+	import Navbar from '../components/Navbar.svelte'
 	import assets from '../stores/defaultAssets'
 	import {link,navigate} from 'svelte-routing'
 	import {findId} from '../stores/asset'
@@ -36,6 +37,7 @@
 		}
 
 </script>
+<Navbar id="{id}" />
 {#if asset}
 	<h1>Status: {asset.working}</h1>
 	{#if asset.working === 'No'}

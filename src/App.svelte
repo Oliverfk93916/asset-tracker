@@ -19,7 +19,6 @@
 </script>
 
 <Router>
-	<Navbar />
   {#if $globalStore.alert}
   <Alert />
   {/if}
