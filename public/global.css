@@ -113,7 +113,7 @@ button:not(:disabled):active {
     text-align: center;
     text-decoration: none;
     display: inline block;
-    font-size: 36px;
+    font-size: 2rem;
     margin: 10px 2px;
     cursor: pointer;
     height: 150px;
