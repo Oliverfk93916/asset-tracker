@@ -16,6 +16,8 @@
 	<button class="btn-home" on:click={() => navigate(`/stocktake`)}>
 		<i class="fas fa-archive"></i>
 	</button>
-
+	<button class="btn-home">
+		<i class="fas fa-plus"></i>
+</button>	
 </div>
 </nav>
