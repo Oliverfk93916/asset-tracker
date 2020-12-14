@@ -38,6 +38,7 @@ body {
 h1{
 	color: rgb(231,95,133);
 	text-align: center;
+  font-weight: 100;
 }
 p,
 h2,
@@ -48,6 +49,7 @@ h6 {
 	 color: rgb(255,255,255);
      font-size: 28px;
      text-align: center;
+     font-weight: 100
 }
 
 
@@ -240,4 +242,13 @@ input[type="checkbox"] {
   cursor: pointer;
   color:rgb(231,95,133);
   font-size: 1.6rem;
+}
+
+section .form-element {
+  padding: 40px 0;
+}
+
+.form-element {
+  display: block;
+  width: 100%;
 }

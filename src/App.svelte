@@ -10,6 +10,7 @@
 	import PartsTemplate from './pages/PartsTemplate.svelte'
 	import PartsReplaced from './pages/PartsReplaced.svelte'
 	import Stocktake from './pages/Stocktake.svelte'
+	import AddAsset from './pages/AddAsset.svelte'
 	import Alert from './Alert.svelte'
 	
 	// router
@@ -30,4 +31,5 @@
 	<Route path="/parts/:id" component={PartsTemplate} />
 	<Route path="/yes/:id" component={PartsReplaced} />
 	<Route path="/stocktake" component={Stocktake} />
+	<Route path="add" component={AddAsset} />
 </Router>
