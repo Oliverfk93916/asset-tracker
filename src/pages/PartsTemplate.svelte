@@ -33,21 +33,21 @@
 </script>
 <Navbar id="{id}" />
 {#if asset}
-{#if asset.working === 'Stripped'}
-<h1>Thank you for stripping this item</h1>
-<h2>Jesus loves you</h2>
-{:else}
-<h1>Please take</h1>
-{#each part as item, i}
-<label >
-    <input id={`chk${i}`} type="checkbox" bind:group={replace} value={item.part}> {item.part}
-</label>
-{/each}
-<div class="form-control">
-<p>Clicking submit means this asset no longer exists</p>
-<div class="btn-group">
-<button type="submit" on:click|preventDefault={addToStock(replace) && findId(id,'Stripped')}>Submit</button>
-</div>
-</div>
-{/if}
+	{#if asset.working === 'Stripped'}
+		<h1>Thank you for stripping this item</h1>
+		<h2>Jesus loves you</h2>
+	{:else}
+		<h1>Please take</h1>
+	{#each part as item, i}
+		<label >
+	   	 <input id={`chk${i}`} type="checkbox" bind:group={replace	} value={item.part}> {item.part}
+		</label>
+	{/each}
+		<div class="form-control">
+			<p>Clicking submit means this asset no longer exists</p>
+			<div class="btn-group">
+				<button type="submit" on:click|preventDefault={addToStock(replace) && findId(id,'Stripped')}>Submit</button>
+			</div>
+		</div>
+	{/if}
 {/if}

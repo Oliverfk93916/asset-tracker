@@ -1,8 +1,9 @@
 <script>
-	import CopyClipBoard from '../components/CopyClipBoard.svelte'
 	import assets from '../stores/defaultAssets'
 	import Navbar from '../components/Navbar.svelte'
 	import {generate} from '../strapi/generateAssets'
+	import { tick } from 'svelte';
+
 	let number
 	let option
 	let name = generate(number,option)
@@ -13,17 +14,19 @@
 	// copied and pasted
 	function formSubmit() {
 	name = generate(number,option)
-	console.log(name)
 }
 
-	const copy = () => {
-		const app = new CopyClipBoard({
-			target: document.getElementById('clipboard'),
-			props: {item},
-		});
-		app.$destroy();
-	}
+	function copy(text) {
+		var textArea = document.createElement("textarea");
+		textArea.value = text;
+	
+ 		document.body.appendChild(textArea);
+ 		textArea.focus();
+ 		textArea.select();
 
+ 		document.execCommand('copy');
+		document.body.removeChild(textArea);
+	}
 
 </script>
 
@@ -57,10 +60,8 @@
 		</div>
 	</form>
 	{#await name then value}
-	{#each value as item}
-	{console.log(item)}
-	<button style="background:none; border:none" on:click={copy}>{item}</button>
-	<div id="clipboard"></div>
+	{#each value as item, i}
+		<button style="background:none; border:none" on:click={copy(item)}>{item}</button>
 	{/each}
 	{/await}
 

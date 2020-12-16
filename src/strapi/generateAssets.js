@@ -29,13 +29,14 @@ export async function generate(number, option){
 		const response = await axios.get(`${url}/asset-data`
 			).catch(error => console.log(error))
 		let data = response.data
+		console.log(data)
 		let filteredData = data.filter(item => item.assetId.slice(0,3) === option)
 		const maxId = Math.max(...filteredData.map(user => user.id))
+		console.log(maxId)
 		let maxIdObj = filteredData.find(item => item.id === maxId)
-
 		for (var x = 1; x <= number; x++){
-			let plusOne = (Number(maxIdObj.assetId.slice(-4)) + x)
-
+		let plusOne = (Number(maxIdObj.assetId.slice(-4)) + x)
+		console.log(plusOne)
 		assetId = option + '-' + ("000" + plusOne).slice(-4)
 
 		let item = {
@@ -48,7 +49,7 @@ export async function generate(number, option){
 		details,
 		dateofRepair}
 
-		axios.post(`${url}/asset-data/`,item).catch(error => console.log(error))
+		//axios.post(`${url}/asset-data/`,item).catch(error => console.log(error))
 
 		urls.push(`${app}${assetId}`)
 	}
