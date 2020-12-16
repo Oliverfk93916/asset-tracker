@@ -2,6 +2,9 @@
 	import assets from '../stores/defaultAssets'
 	import Navbar from '../components/Navbar.svelte'
 	import {generate} from '../strapi/generateAssets'
+	import {onMount} from 'svelte'
+	import user from '../stores/user'
+	import {link,navigate} from 'svelte-routing'
 
 	let number
 	let option
@@ -9,10 +12,19 @@
 
 	$: asset = $assets.find(item => item.assetId.slice(0,3) === option)
   	
+  	onMount(()=>{
+		let url = location.href
+		localStorage.setItem("url",url)
+		if(!$user.jwt){
+			navigate('/login')
+			return
+		}
+	})
 
 	// copied and pasted
 	function formSubmit() {
 	name = generate(number,option)
+	number = ''
 }
 
 	function copy(text) {

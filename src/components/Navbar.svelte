@@ -5,8 +5,8 @@
 	import {onMount} from 'svelte'
 </script>
 
-<nav class="navbar">
-	<div class="nav-center">
+<nav class="navbar navbar-dark bg-dark align-middle">
+	<div class="container">
 		<button class="btn-home">
 		<i class="fas fa-plus" on:click={() => navigate(`/add`)}></i>
 		</button>	
@@ -18,7 +18,7 @@
 		<i class="fas fa-archive"></i>
 	</button>
 		{#if {id}}
-	<h1>{id}</h1>
+	<p class="fs-4" style="color:rgb(231,95,133);margin-bottom: -1px; margin-right: 5px;">{id}</p>
 	{/if}
 </div>
 </nav>

@@ -39,7 +39,7 @@
 </script>
 <Navbar id="{id}" />
 {#if asset}
-	<h1>Status: {asset.working}</h1>
+	<h1>Current Status: {asset.working}</h1>
 	{#if asset.working === 'No'}
 	<p>Issue: {asset.details}</p>
 	{/if}

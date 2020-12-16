@@ -1,4 +1,4 @@
-:root {
+/*:root {
   --primaryColor: #9e3aa3;
   --primaryFont: "Catamaran", sans-serif;
   --slantedFont: "Kaushan Script", cursive;
@@ -28,14 +28,8 @@ body {
   margin-top: 5rem;
 }
 
-h1{
-	color: rgb(231,95,133);
-	text-align: center;
-  font-weight: 100;
-  font-size: 200%;
-}
+
 p,
-h2,
 h3,
 h4,
 h5,
@@ -227,14 +221,7 @@ input[type="checkbox"] {
   align-items: center;
   justify-content: space-between;
 }
-.btn-home{
-  margin-top: 1rem;
-  background: transparent;  
-  border:none;
-  cursor: pointer;
-  color:rgb(231,95,133);
-  font-size: 1.6rem;
-}
+
 
 section .addAsset {
   display: inline block;
@@ -248,3 +235,34 @@ section .form-element {
   width: 100%;
 }
 
+*/
+
+body {
+  background: rgb(26, 26, 26);
+  line-height: 1.4;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.btn-home{
+  background: transparent;  
+  border:none;
+  cursor: pointer;
+  color:rgb(231,95,133);
+  font-size: 1.6rem;
+}
+
+h1{
+  color: rgb(231,95,133);
+  text-align: center;
+  font-weight: 100;
+  font-size: 200%;
+  margin-top: 50px
+}
+
+h2 {
+     color: rgb(255,255,255);
+     font-size: 150%;
+     text-align: center;
+     font-weight: 100
+}
