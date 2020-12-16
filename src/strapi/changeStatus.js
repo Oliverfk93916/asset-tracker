@@ -10,7 +10,7 @@ const options = {
 	day: '2-digit',
 	month: '2-digit',
  	year: 'numeric', 
-};
+}
 
 //variables
 let reload = true
@@ -55,6 +55,7 @@ switch (value){
 	.catch(error => console.log(error))
     location.reload(reload)
 }
+
 
 
 
