@@ -2,7 +2,6 @@
 	import assets from '../stores/defaultAssets'
 	import Navbar from '../components/Navbar.svelte'
 	import {generate} from '../strapi/generateAssets'
-	import { tick } from 'svelte';
 
 	let number
 	let option
@@ -60,9 +59,11 @@
 		</div>
 	</form>
 	{#await name then value}
+	<div>
 	{#each value as item, i}
 		<button style="background:none; border:none" on:click={copy(item)}>{item}</button>
 	{/each}
+	</div>
 	{/await}
 
 </section>
