@@ -5,7 +5,6 @@ import {navigate,link} from 'svelte-routing'
 import {findId} from '../stores/asset'
 
 export async function addToStock(items, asset){
-	findId(asset,'Stripped')
 	const response = await axios.get(`${url}/parts?_limit=-1`
 		).catch(error => console.log(error))
 	let data = response.data
@@ -20,7 +19,9 @@ export async function addToStock(items, asset){
 			const response = await axios.put(`${url}/parts/${change[x].id}`,change[x])
 		.catch(error => console.log(error))
 		}
+
 		// location.reload(true)
 	}
+	findId(asset,'Stripped')
 }
 
