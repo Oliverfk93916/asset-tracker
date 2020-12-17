@@ -56,15 +56,6 @@
 			<li><button class="dropdown-item" style="padding-bottom: 10px" type="button" on:click={()=>findId(id,'Yes')}>No</button></li>
 		</ul>
 	</div>
-	<!-- {#if yesClicked}
-			<section class="form-details" transition:fly={{y:-200}} >
-				<h2 class="section-title">Did you replace anything?</h2>
-			</section>
-			<div class="btn" transition:fly={{y:-200}}>
-			<button type="button" class="btn2" on:click={navigate(`/yes/${id}`)}>Yes </button>
-			<button type="button" class="btn2" on:click={()=>findId(id,'Yes')}>No </button>
-			</div>
-		{/if} -->
 
 	<!-- NO BUTTON -->
 	<div class="d-grid gap-4 col-6 mx-auto dropdown">
@@ -72,22 +63,10 @@
 		<ul class="dropdown-menu dropdown-menu-dark col-12" aria-labelledby="dropdownMenuNo">
 			<li><h3 class="dropdown-header" style="text-align: center">What's the issue?</h3></li>
 			<li><hr class="dropdown-divider"></li>
-			<li><input class="dropdown-item" style="background: rgb(65,69,74);" type="text" id="details" placeholder="Details" bind:value={details} required></li>
+			<li><input class="dropdown-item form-control" style="border:1px solid #fff; background: rgb(65,69,74)" type="text" id="details" placeholder="Details" bind:value={details} required></li>
 			<li><hr class="dropdown-divider"></li>
 			<li><button class="dropdown-item" style="text-align: center;" type="button" disabled={isEmpty} on:click|preventDefault={findId(id,'No', details)}>Submit</button></li>
 	</div>
-	<!-- 
-			{#if noClicked}
-			<section class="form-details" transition:fly={{y:-200}} >
-				<h2 class="section-title">what's the issue?</h2>
-			<form class="login-form" on:submit|preventDefault={findId(id,'No', details) && formToggle('no')}>
-		<div class="form-control">
-			<label for="details">Details</label>
-			<input type="text" id="details" bind:value={details}>
-		<button type="submit" disabled={isEmpty}>Submit </button>
-		</form>
-	</section>
-		{/if} -->
 
 	<!-- DEAD BUTTON -->
 	<div class="d-grid gap-4 col-6 mx-auto">

@@ -9,7 +9,7 @@ const asset = writable([...localData])
 
 
  export async function findId(id, value, details=''){
-	const response = await axios.get(`${url}/asset-data`
+	const response = await axios.get(`${url}/asset-data?_limit=-1`
 		).catch(error => console.log(error))
 	let data = response.data
 	let item = data.filter(asset => asset.assetId === id)

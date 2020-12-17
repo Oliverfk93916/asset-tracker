@@ -4,7 +4,7 @@ import url from './URL'
 import {navigate,link} from 'svelte-routing'
 
 export async function addToStock(items){
-	const response = await axios.get(`${url}/parts`
+	const response = await axios.get(`${url}/parts?_limit=-1`
 		).catch(error => console.log(error))
 	let data = response.data
 	let change = []
