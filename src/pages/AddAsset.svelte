@@ -73,7 +73,7 @@
 	{#await name then value}
 	<div>
 	{#each value as item, i}
-		<button style="background:none; border:none" on:click={copy(item)}>{item}</button>
+		<button class="assetText" style="background:none; border:none" on:click={copy(item)}>{item}</button>
 	{/each}
 	</div>
 	{/await}

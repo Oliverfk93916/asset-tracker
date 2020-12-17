@@ -268,3 +268,11 @@ p {
      text-align: center;
      font-weight: 100
 }
+.assetText:hover,
+.assetText:active,
+.assetText:visited
+ {
+  color: #fff;
+}
+
+
