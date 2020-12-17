@@ -25,11 +25,32 @@
 
 <Navbar id='' />
 <h1>Welcome to Asset Tracker</h1>
-<h2>Scan an Asset to get started</h2>
-<p>There are {controller.length} working controllers</p>
-<p>There are {noController.length} controllers which can be fixed</p>
-<p>There are {headset.length} working headsets</p>
-<p>There are {noHeadset.length} headsets which can be fixed</p>
+<h2 style="margin-bottom: 40px;">Scan an Asset to get started</h2>
+
+<table class="table table-dark caption-top" style="color: rgb(200,200,200);">
+	<caption style="margin-left: 10px;">Working Status:</caption>
+  <thead>
+    <tr>
+      <th scope="col">Assets</th>
+      <th scope="col">Working</th>
+      <th scope="col">Not Working</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Headsets</th>
+      <td>{headset.length}</td>
+      <td>{noHeadset.length}</td>
+    </tr>
+    <tr>
+      <th scope="row">Controllers</th>
+      <td>{controller.length}</td>
+      <td>{noController.length}</td>
+    </tr>
+ </tbody>
+</table>
+
+
 
 
 

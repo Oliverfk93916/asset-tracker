@@ -40,7 +40,7 @@
 		document.body.removeChild(textArea);
 	}
 
-	function showToast(item) {
+	function handleSubmit(item) {
 		active = 1
 		setTimeout(()=> active = 0, 1500)
 		if(item){
@@ -73,22 +73,22 @@
 			<ul class="list-group list-group-flush">
 				{#each value as item, i}
 					<li class="list-group-item" style="background: transparent;text-align: center">
-						<button class="assetText" style="background:none; border:none" on:click={showToast(item)}>{item}</button>
+						<button class="assetText" style="background:none; border:none" on:click={handleSubmit(item)}>{item}</button>
 					</li>
 				{/each}
 			</ul>
 		</div>
 	{/await}
 	<div class="d-grid gap-4 col-6 mx-auto">
-	<div aria-live="polite" aria-atomic="true" class="position-relative">
-		<div class="toast-container position-absolute p-3">
-			<div class="toast d-flex align-items-center text-white bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true" style="opacity:{active}">
-				<div class="toast-body">Copied to clipboard</div>
-	  			<button type="button" class="btn-close btn-close-white ms-auto me-2" data-bs-dismiss="toast" aria-label="Close" on:click={closeToast}></button>
+		<div aria-live="polite" aria-atomic="true" class="position-relative">
+			<div class="toast-container position-absolute p-3">
+				<div class="toast d-flex align-items-center text-white bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true" style="opacity:{active}">
+					<div class="toast-body">Copied to clipboard</div>
+		  			<button type="button" class="btn-close btn-close-white ms-auto me-2" data-bs-dismiss="toast" aria-label="Close" on:click={closeToast}></button>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 
 
