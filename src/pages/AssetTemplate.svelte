@@ -47,10 +47,10 @@
 
 	<!-- YES BUTTON -->
 	<div class="d-grid gap-4 col-6 mx-auto dropdown">
-		<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
-	 style="margin-top: 20px;" on:click={()=>formToggle('yes')}>Working</button>
-		<ul class="dropdown-menu dropdown-menu-dark col-12" id="dropdownMenu2">
-			<li><h3 class="dropdown-header">Anything replaced?</h3></li>
+		<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuYes" data-bs-toggle="dropdown" aria-expanded="false"
+	 style="margin-top: 20px;">Working</button>
+		<ul class="dropdown-menu dropdown-menu-dark col-12" aria-labelledby="dropdownMenuYes">
+			<li><h3 class="dropdown-header" style="text-align: center">Any parts replaced?</h3></li>
 			 <li><hr class="dropdown-divider"></li>
 			<li><button class="dropdown-item" style="padding-bottom: 15px" type="button" on:click={navigate(`/yes/${id}`)}>Yes</button></li>
 			<li><button class="dropdown-item" style="padding-bottom: 10px" type="button" on:click={()=>findId(id,'Yes')}>No</button></li>
@@ -68,9 +68,15 @@
 
 	<!-- NO BUTTON -->
 	<div class="d-grid gap-4 col-6 mx-auto dropdown">
-		<button class="btn btn-outline-secondary dropdown-toggle
-	" style="margin-top: 25px;" on:click={()=>formToggle('no')}>Not Working</button>
+		<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuNo" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top: 25px;">Not Working</button>
+		<ul class="dropdown-menu dropdown-menu-dark col-12" aria-labelledby="dropdownMenuNo">
+			<li><h3 class="dropdown-header" style="text-align: center">What's the issue?</h3></li>
+			<li><hr class="dropdown-divider"></li>
+			<li><input class="dropdown-item" type="text" id="details" bind:value={details} required></li>
+			<li><hr class="dropdown-divider"></li>
+			<li><button class="dropdown-item" style="text-align: center;" type="button" disabled={isEmpty} on:click|preventDefault={findId(id,'No', details)}>Submit</button></li>
 	</div>
+	<!-- 
 			{#if noClicked}
 			<section class="form-details" transition:fly={{y:-200}} >
 				<h2 class="section-title">what's the issue?</h2>
@@ -81,7 +87,7 @@
 		<button type="submit" disabled={isEmpty}>Submit </button>
 		</form>
 	</section>
-		{/if}
+		{/if} -->
 
 	<!-- DEAD BUTTON -->
 	<div class="d-grid gap-4 col-6 mx-auto">
