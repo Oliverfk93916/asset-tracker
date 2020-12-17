@@ -41,18 +41,16 @@
 	}
 
 	function showToast(item) {
-		if (active === 1){
-			active = 0
-		} else {
-			active = 1
-			setTimeout(()=> active = 0, 1500)
-		}
-		console.log(active)
-		console.log(item)
+		active = 1
+		setTimeout(()=> active = 0, 1500)
 		if(item){
-		copy(item)
+			copy(item)
 		}
 	}
+	function closeToast(){
+		active = 0
+	}
+
 
 </script>
 
@@ -86,7 +84,7 @@
 		<div class="toast-container position-absolute p-3">
 			<div class="toast d-flex align-items-center text-white bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true" style="opacity:{active}">
 				<div class="toast-body">Copied to clipboard</div>
-	  			<button type="button" class="btn-close btn-close-white ms-auto me-2" data-bs-dismiss="toast" aria-label="Close" on:click={showToast}></button>
+	  			<button type="button" class="btn-close btn-close-white ms-auto me-2" data-bs-dismiss="toast" aria-label="Close" on:click={closeToast}></button>
 			</div>
 		</div>
 	</div>
