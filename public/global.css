@@ -121,41 +121,9 @@ button:not(:disabled):active {
      font-size: 28px;
      text-align: center;
      padding: 25px 32px;
-   }   
-   .form-text {
-   color:white;
-   }
+   }  
 
-   .form {
-  width: var(--smallWidth);
-  margin: 0 auto;
-  margin-top: 10rem;
-  max-width: 35rem;
-}
-.form-details{
-  margin-left: 25%;
-    margin-right: 25%;
-      width: 50%;
-}
-.form-control label {
-  display: block;
-  color: white;
-}
-.form-control input {
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid var(--darkGrey);
-  margin-bottom: 1.25rem;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-}
-.login-form {
-  background: var(--mainWhite);
-  padding: 1.25rem 1rem;
-  text-transform: capitalize;
-  border-radius: var(--mainBorderRadius);
-  box-shadow: var(--lightShadow);
-}
+
 .form-popup {
   display: none;
   position: fixed;
@@ -281,6 +249,8 @@ p {
   color: #fff;
   opacity: 1;
 }
+
+
 
 
 
