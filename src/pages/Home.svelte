@@ -27,7 +27,7 @@
 <h1>Welcome to Asset Tracker</h1>
 <h2 style="margin-bottom: 40px;">Scan an Asset to get started</h2>
 
-<table class="table table-dark caption-top" style="color: rgb(200,200,200);">
+<table class="table table-dark caption-top" style="color: rgb(200,200,200); width: 98%; margin-left: 1%; border: 2px solid rgb(50,56,62); ">
 	<caption style="margin-left: 10px;">Working Status:</caption>
   <thead>
     <tr>

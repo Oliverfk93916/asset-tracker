@@ -35,7 +35,7 @@
 </script>
 
 <h2 class="section-title" style="margin-top: 75px;">Login</h2>
-<form class="px-4 py-3" style="border: 1px solid;margin-top: 25px;">
+<form class="px-4 py-3" style="border: 2px solid ;margin-top: 25px; width: 98%; margin-left: 1%; border-radius: 5px;">
     <div class="mb-3">
     	<label for="username" class="form-label" style="color: rgb(255,255,255); ">Username</label>
 		<input type="text" id="username" class="form-control" bind:value={username}>
@@ -45,11 +45,11 @@
 		<input type="password" id="password" class="form-control" bind:value={password}>
     </div>
     <div class="d-grid gap-4 col-6 mx-auto">
-    <button type="button" class="btn btn-dark" disabled={isEmpty} on:click|preventDefault={handleSubmit}>Submit</button>
+    	<button type="button" class="btn btn-dark" disabled={isEmpty} on:click|preventDefault={handleSubmit}>Submit</button>
 	</div>
-  </form>
+</form>
 
-  <div class="d-grid gap-4 col-6 mx-auto">
+	<div class="d-grid gap-4 col-6 mx-auto">
 		<div aria-live="polite" aria-atomic="true" class="position-relative">
 			<div class="toast-container position-absolute p-3">
 				<div class="toast d-flex align-items-center text-white bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true" style="opacity:{active}">
