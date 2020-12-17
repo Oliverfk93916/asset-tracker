@@ -38,37 +38,37 @@
 		<h2>Jesus loves you</h2>
 	{:else}
 		<h1>Please take</h1>
-	{#each part as item, i}
-		<label >
-	   	 <input id={`chk${i}`} type="checkbox" bind:group={replace	} value={item.part}> {item.part}
+		<div class="d-grid gap-4 col-6 mx-auto" style="margin-bottom: 15px;">
+		<div class="list-group">
+			{#each part as item, i}
+				<label class="list-group-item list-group-item-dark" style="background: transparent; color: rgb(150,155,161);border-radius: 5px ">
+	   			<input class="form-check-input me-1" id={`chk${i}`} type="checkbox" bind:group={replace} value={item.part}> {item.part}
 		</label>
 	{/each}
+</div>
+</div>
 		<div class="d-grid gap-4 col-6 mx-auto">
 			<!-- BUTTON -->
 			<button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Submit</button>
 			<!-- MODAL -->
 			<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Hey</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Clicking submit means this asset no longer exists
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ah, nah</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close" on:click|preventDefault={addToStock(replace,id)}>Hell Yeah!</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END OF MODAL -->
+  				<div class="modal-dialog modal-dialog-centered">
+    				<div class="modal-content">
+      					<div class="modal-header">
+        					<h5 class="modal-title" id="staticBackdropLabel">Hey</h5>
+        				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     					</div>
+     					<div class="modal-body">Clicking submit means this asset no longer exists
+     					</div>
+     					<div class="modal-footer">
+       					<button type="button" class="btn btn-secondary"data-bs-dismiss="modal">Ah, nah</button>
+       					<button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close" on:click|preventDefault={addToStock(replace,id)}>Hell Yeah!</button>
+     					</div>
+   					</div>
+ 				</div>
+			</div>
 		</div>
+		<!-- END OF MODAL -->
 	{/if}
 {/if}
 
-
-
-<!-- on:click|preventDefault={addToStock(replace,id)} -->
