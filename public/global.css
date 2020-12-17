@@ -268,11 +268,19 @@ p {
      text-align: center;
      font-weight: 100
 }
+
+.assetText{
+  color: rgb(231,95,133);
+}
+
+
 .assetText:hover,
 .assetText:active,
 .assetText:visited
  {
   color: #fff;
+  opacity: 1;
 }
+
 
 
