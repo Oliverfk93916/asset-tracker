@@ -49,11 +49,11 @@
 	<div class="d-grid gap-4 col-6 mx-auto dropdown" >
 		<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
 	 style="margin-top: 20px;" on:click={()=>formToggle('yes')}>Working</button>
-		<ul class="dropdown-menu dropdown-menu-dark" id="dropdownMenu2">
+		<ul class="dropdown-menu dropdown-menu-dark" style="padding: 12.5px" id="dropdownMenu2">
 			<li><h3 class="dropdown-header">Anything replaced?</h3></li>
 			 <li><hr class="dropdown-divider"></li>
-			<li><button class="dropdown-item" type="button" on:click={navigate(`/yes/${id}`)}>Yes</button></li>
-			<li><button class="dropdown-item" type="button" on:click={()=>findId(id,'Yes')}>No</button></li>
+			<li><button class="dropdown-item" style="padding-bottom: 15px" type="button" on:click={navigate(`/yes/${id}`)}>Yes</button></li>
+			<li><button class="dropdown-item" style="padding-bottom: 10px" type="button" on:click={()=>findId(id,'Yes')}>No</button></li>
 		</ul>
 	</div>
 	<!-- {#if yesClicked}
