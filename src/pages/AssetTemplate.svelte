@@ -46,11 +46,12 @@
 	<h2>Change to</h2>
 
 	<!-- YES BUTTON -->
-	<div class="d-grid gap-4 col-6 mx-auto dropdown" >
+	<div class="d-grid gap-4 col-6 mx-auto dropdown container-fluid" >
 		<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
 	 style="margin-top: 20px;" on:click={()=>formToggle('yes')}>Working</button>
 		<ul class="dropdown-menu dropdown-menu-dark" id="dropdownMenu2">
-			 <li><span class="dropdown-item-text" style="background: rgb(69,74,79); ">Did you replace anything?</span></li>
+			<li><h3 class="dropdown-header">Anything replaced?</h3></li>
+			 <li><hr class="dropdown-divider"></li>
 			<li><button class="dropdown-item" type="button" on:click={navigate(`/yes/${id}`)}>Yes</button></li>
 			<li><button class="dropdown-item" type="button" on:click={()=>findId(id,'Yes')}>No</button></li>
 		</ul>
@@ -66,7 +67,7 @@
 		{/if} -->
 
 	<!-- NO BUTTON -->
-	<div class="d-grid gap-4 col-6 mx-auto dropdown">
+	<div class="d-grid gap-4 col-6 mx-auto dropdown container-fluid">
 		<button class="btn btn-outline-secondary dropdown-toggle
 	" style="margin-top: 25px;" on:click={()=>formToggle('no')}>Not Working</button>
 	</div>
@@ -83,7 +84,7 @@
 		{/if}
 
 	<!-- DEAD BUTTON -->
-	<div class="d-grid gap-4 col-6 mx-auto">
+	<div class="d-grid gap-4 col-6 mx-auto container-fluid">
 		<button class="btn btn-outline-secondary
 	" style="margin-top: 25px;" on:click={()=>findId(id,'Dead')}>Dead</button>
 	</div>
