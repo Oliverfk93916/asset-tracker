@@ -44,8 +44,9 @@
 	<p>Issue: {asset.details}</p>
 	{/if}
 	<h2>Change to</h2>
-	<div class="btn-group">
-		<button on:click={()=>formToggle('yes')}>Working</button>
+	<div class="d-grid gap-4 col-6 mx-auto" >
+		<button class="btn btn-outline-secondary
+	" style="margin-top: 35px;" on:click={()=>formToggle('yes')}>Working</button>
 	</div>
 	{#if yesClicked}
 			<section class="form-details" transition:fly={{y:-200}} >
@@ -56,8 +57,9 @@
 			<button type="button" class="btn2" on:click={()=>findId(id,'Yes')}>No </button>
 			</div>
 		{/if}
-	<div class="btn-group">
-		<button on:click={()=>formToggle('no')}>Not Working</button>
+	<div class="d-grid gap-4 col-6 mx-auto">
+		<button class="btn btn-outline-secondary
+	" style="margin-top: 25px;" on:click={()=>formToggle('no')}>Not Working</button>
 	</div>
 			{#if noClicked}
 			<section class="form-details" transition:fly={{y:-200}} >
@@ -70,7 +72,8 @@
 		</form>
 	</section>
 		{/if}
-			<div class="btn-group">
-		<button on:click={()=>findId(id,'Dead')}>Dead</button>
+			<div class="d-grid gap-4 col-6 mx-auto">
+		<button class="btn btn-outline-secondary
+	" style="margin-top: 25px;" on:click={()=>findId(id,'Dead')}>Dead</button>
 	</div>
 {/if}
