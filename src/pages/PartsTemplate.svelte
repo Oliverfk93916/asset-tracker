@@ -43,11 +43,32 @@
 	   	 <input id={`chk${i}`} type="checkbox" bind:group={replace	} value={item.part}> {item.part}
 		</label>
 	{/each}
-		<div class="form-control">
-			<p>Clicking submit means this asset no longer exists</p>
-			<div class="btn-group">
-				<button type="submit" on:click|preventDefault={addToStock(replace) && findId(id,'Stripped')}>Submit</button>
-			</div>
+		<div class="d-grid gap-4 col-6 mx-auto">
+			<!-- BUTTON -->
+			<button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Submit</button>
+			<!-- MODAL -->
+			<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Hey</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Clicking submit means this asset no longer exists
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ah, nah</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close" on:click|preventDefault={addToStock(replace,id)}>Hell Yeah!</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END OF MODAL -->
 		</div>
 	{/if}
 {/if}
+
+
+
+<!-- on:click|preventDefault={addToStock(replace,id)} -->

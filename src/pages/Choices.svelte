@@ -25,10 +25,10 @@
 	<h2>Please wait</h2>
 {:else}
 {#if asset.working === 'Stripped'}
-<h1>This asset has been stripped and doesn't exist</h1>
+<h1>This asset doesn't exist</h1>
 <h2>Are you trying to resurrect?</h2>
-<div class="btn-group" style="padding-top: 5%">
-	<button on:click={()=>navigate(`/asset/${id}`)}>Change Status</button>
+<div class="d-grid gap-4 col-6 mx-auto" style="padding-top: 10%">
+	<button class="btn btn-outline-secondary" on:click={()=>navigate(`/asset/${id}`)}>Change Status</button>
 </div>
 {:else}
 <h1>What would you like to do?</h1>

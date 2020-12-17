@@ -43,6 +43,7 @@ switch (value){
         if(dateOfDeath === ''){
         dateOfDeath = now
         item = {...item,dateOfDeath}
+    break
     }
     default:
     	console.log('Dunno m9');
