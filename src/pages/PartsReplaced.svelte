@@ -25,12 +25,16 @@
 </script>
 <Navbar id="{id}" />
 <h1>What did you replace?</h1>
-<h2>Select all that apply</h2>
-{#each part as item, i}
-<label >
-    <input id={`chk${i}`} type="checkbox" bind:group={replace} value={item.part}> {item.part}
-</label>
-{/each}
-<div class="btn-group">
-<button type="submit" on:click|preventDefault={takeFromStock(replace,id)}>Submit</button>
+<h2 style="margin-bottom: 20px;">Select all that apply</h2>
+<div class="d-grid gap-4 col-6 mx-auto" style="margin-bottom: 15px;">
+	<div class="list-group">
+		{#each part as item, i}
+			<label class="list-group-item list-group-item-dark" style="background: transparent; color: rgb(150,155,161);border-radius: 5px; margin-bottom:2px;">
+   			 <input id={`chk${i}`} type="checkbox" bind:group={replace} value={item.part}> {item.part}
+			</label>
+		{/each}
+	</div>
+</div>
+<div class="d-grid gap-4 col-6 mx-auto">
+	<button class="btn btn-outline-secondary" type="button" on:click|preventDefault={takeFromStock(replace,id)}>Submit</button>
 </div>
