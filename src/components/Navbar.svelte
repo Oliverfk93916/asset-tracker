@@ -18,7 +18,8 @@
 		<i class="fas fa-archive"></i>
 	</button>
 		{#if {id}}
-	<p class="fs-4" style="color:rgb(231,95,133);margin-bottom: -1px; margin-right: 5px;">{id}</p>
+	<button class="fs-4" style="background: transparent; border:none; color:rgb(231,95,133);" on:click={() => navigate(`/${id}`)}>
+	{id}</button>
 	{/if}
 </div>
 </nav>
