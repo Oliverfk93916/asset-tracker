@@ -72,7 +72,7 @@
 		<ul class="dropdown-menu dropdown-menu-dark col-12" aria-labelledby="dropdownMenuNo">
 			<li><h3 class="dropdown-header" style="text-align: center">What's the issue?</h3></li>
 			<li><hr class="dropdown-divider"></li>
-			<li><input class="dropdown-item" type="text" id="details" bind:value={details} required></li>
+			<li><input class="dropdown-item" style="background: rgb(65,69,74);" type="text" id="details" placeholder="Details" bind:value={details} required></li>
 			<li><hr class="dropdown-divider"></li>
 			<li><button class="dropdown-item" style="text-align: center;" type="button" disabled={isEmpty} on:click|preventDefault={findId(id,'No', details)}>Submit</button></li>
 	</div>
