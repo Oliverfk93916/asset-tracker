@@ -31,6 +31,7 @@
 	function closeToast(){
 		active = 0
 	}
+	
 </script>
 
 <h2 class="section-title" style="margin-top: 75px;">Login</h2>
