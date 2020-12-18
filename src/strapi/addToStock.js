@@ -11,6 +11,7 @@ function getStorageUser(){
 }
 
 export async function addToStock(items, asset){
+	console.log(items)
 	const token = getStorageUser().jwt
 	if(token){
 	const response = await axios.get(`${url}/parts?_limit=-1`
