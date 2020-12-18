@@ -21,7 +21,7 @@
 
 <Navbar id=''/>
 <h1>Hello</h1>
-<h2>This page isn't ready yet, no stocktake for you :)</h2>
+<h2>WIP</h2>
 
 <p style="margin-top: 20px;" class="d-grid gap-4 col-8 mx-auto" >
 	<a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">HTC Vive Pro Controller</a>
@@ -29,20 +29,20 @@
 <div class="row">
 	<div class="col-8 mx-auto">
     	<div class="collapse multi-collapse" id="multiCollapseExample1">
-    		<div class="input-group mb-3">
-		 		<span class="input-group-text" style="width: 65%; background: rgb(26,26,26); color: rgb(200,200,200);">Motherboard</span>
-	  			<input type="number" class="form-control" style="background: rgb(200,200,200);"  required>
+    		<div class="input-group mb-3" >
+		 		<span class="input-group-text stocktakeSpan">Motherboard</span>
+	  			<input type="number" class="form-control stocktakeInput"required>
 	  		</div>
 	  		<div class="input-group mb-3">
-		 		<span class="input-group-text" style="width: 65%; background: rgb(26,26,26); color: rgb(200,200,200);">On Button</span>
-	  			<input type="number" class="form-control" style="background: rgb(200,200,200)" required>
+		 		<span class="input-group-text stocktakeSpan">On Button</span>
+	  			<input type="number" class="form-control stocktakeInput"required>
 	  		</div>
 	  		<div class="input-group mb-3">
-		 		<span class="input-group-text" style="width: 65%; background: rgb(26,26,26); color: rgb(200,200,200);">Trigger</span>
-	  			<input type="number" class="form-control" style="background: rgb(200,200,200)" required>
+		 		<span class="input-group-text stocktakeSpan">Trigger</span>
+	  			<input type="number" class="form-control stocktakeInput" required>
 	  		</div>
 			<div class="d-grid gap-4 col-6 mx-auto">
-    			<button data-bs-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1"style="margin-bottom: 20px;"class="btn btn-dark" type="submit">Submit form</button>
+    			<button data-bs-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1" class="btn btn-dark stocktakeSubmit" type="submit">Submit form</button>
    			</div>
     	</div>
   	</div>
