@@ -15,7 +15,6 @@
 // globalStore.toggleItem('alert',true,"incorrect password",true)
 
 	async function handleSubmit(){
-		
 		let user
 		user = await loginUser({username,password})
 		if (user){

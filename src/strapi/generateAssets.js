@@ -6,9 +6,13 @@ import assets from '../stores/defaultAssets'
 
 let app = 'https://asset-tracker.netlify.app/'
 
+function getStorageUser(){
+	return localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : {usernmae :null, jwt: null}
+}
 
 export async function generate(number, option){
-
+	const token = getStorageUser().jwt
+	if(token){
 	//variables for object
 	let urls = []
 	const options = { 
@@ -26,7 +30,7 @@ export async function generate(number, option){
 	let dateofRepair = ''
 
 	
-	const response = await axios.get(`${url}/asset-data?_limit=-1`).catch(error => console.log(error))
+	const response = await axios.get(`${url}/asset-data?_limit=-1`,{headers: {Authorization: `Bearer ${token}`,}}).catch(error => console.log(error))
 	let data = response.data
 	let filteredData = data.filter(item => item.assetId.slice(0,3) === option)
 	const maxId = Math.max(...filteredData.map(user => user.id))
@@ -47,11 +51,12 @@ export async function generate(number, option){
 			dateofRepair
 		}
 
-		axios.post(`${url}/asset-data/`,item).catch(error => console.log(error))
+		axios.post(`${url}/asset-data`,item,{headers: {Authorization: `Bearer ${token}`,}}).catch(error => console.log(error))
 
 		urls.push(`${app}${assetId}`)
 	}
 	return urls
+}
 }
 
 

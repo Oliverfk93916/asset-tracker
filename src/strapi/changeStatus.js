@@ -3,9 +3,14 @@ import axios from 'axios'
 import url from './URL'
 import {navigate,link} from 'svelte-routing'
 
+function getStorageUser(){
+    return localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : {usernmae :null, jwt: null}
+}
+
 export async function changeStatus(item, itemId, value,details){
 
-
+const token = getStorageUser().jwt
+    if(token){
 const options = { 
 	day: '2-digit',
 	month: '2-digit',
@@ -52,9 +57,10 @@ switch (value){
   	item = {...item,working:value}
 
  //make request
-	const response = await axios.put(`${url}/asset-data/${itemId}`,item)
+	const response = await axios.put(`${url}/asset-data/${itemId}`,item,{headers: {Authorization: `Bearer ${token}`,}})
 	.catch(error => console.log(error))
     location.reload(reload)
+}
 }
 
 
