@@ -5,7 +5,7 @@
 	import {onMount} from 'svelte'
 </script>
 
-<nav class="navbar navbar-dark bg-dark align-middle" style="border-bottom: 1px solid rgb(231,95,133)">
+<nav class="navbar navbar-dark align-middle" style="border-bottom: 1px solid rgb(231,95,133); background-color:rgb(26, 26, 26); box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5)">
 	<div class="container">
 		<button class="btn-home">
 		<i class="fas fa-plus" on:click={() => navigate(`/add`)}></i>
