@@ -63,7 +63,7 @@
 				postStocktake(type,obj.headset)
 				success = 1
 				setTimeout(()=> success = 0, 1500)
-				setTimeout(()=>location.reload(true),1500)
+				setTimeout(()=> location.reload(true),1500)
 			} else {
 				active = 1
 				setTimeout(()=> active = 0, 1500)

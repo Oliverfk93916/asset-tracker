@@ -38,8 +38,8 @@
 		<h2>Jesus loves you</h2>
 	{:else}
 		{#if part.length > 0}
-			<h1>Please take</h1>
-			<div class="d-grid gap-4 col-6 mx-auto" style="margin-bottom: 15px;">
+			<h1 style="margin-bottom: 20px;">Please take</h1>
+			<div class="d-grid gap-4 col-7 mx-auto" style="margin-bottom: 15px;">
 				<div class="list-group">
 					{#each part as item, i}
 						<label class="list-group-item list-group-item-dark stripListItem">
@@ -52,7 +52,7 @@
 			<h1 style="margin-bottom: 10px;">Inventory full</h1>
 		{/if}
 
-		<div class="d-grid gap-4 col-6 mx-auto">
+		<div class="d-grid gap-4 col-8 mx-auto">
 			<!-- BUTTON -->
 			<button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Scrap!</button>
 			<!-- MODAL -->

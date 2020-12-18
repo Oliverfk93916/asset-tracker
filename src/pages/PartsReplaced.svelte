@@ -28,7 +28,7 @@
 <Navbar id="{id}" />
 <h1>What did you replace?</h1>
 <h2 style="margin-bottom: 20px;">Select all that apply</h2>
-<div class="d-grid gap-4 col-6 mx-auto" style="margin-bottom: 15px;">
+<div class="d-grid gap-4 col-7 mx-auto" style="margin-bottom: 15px;">
 	<div class="list-group">
 		{#each part as item, i}
 			<label class="list-group-item list-group-item-dark partsContainer">
@@ -37,6 +37,6 @@
 		{/each}
 	</div>
 </div>
-<div class="d-grid gap-4 col-6 mx-auto">
+<div class="d-grid gap-4 col-8 mx-auto">
 	<button class="btn btn-outline-secondary" type="button" on:click|preventDefault={takeFromStock(replace,id)}>Submit</button>
 </div>

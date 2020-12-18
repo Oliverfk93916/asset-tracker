@@ -58,7 +58,7 @@
 
 <h1>Generate new tags!</h1>
 <!-- Generate assets form -->
-	<form class="d-grid gap-4 col-6 mx-auto" on:submit|preventDefault={() => formSubmit()}>
+	<form class="d-grid gap-4 col-8 mx-auto" on:submit|preventDefault={() => formSubmit()}>
 		<input class="form-control" type="number" name="number" id="number" placeholder="How Many?" style="margin-top: 45px; background: rgb(39,44,49); color: #fff"bind:value={number} required>
 		<select class="form-select" style="background: rgb(39,44,49); color: rgb(90,97,106);"name="which" id="which" bind:value={option}>
 			<option value='cnt' selected>HTC Vive Pro Controller</option>

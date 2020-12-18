@@ -46,7 +46,7 @@
 	<h2>Change to</h2>
 
 	<!-- YES BUTTON -->
-	<div class="d-grid gap-4 col-6 mx-auto dropdown">
+	<div class="d-grid gap-4 col-8 mx-auto dropdown">
 		<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuYes" data-bs-toggle="dropdown" aria-expanded="false"
 	 style="margin-top: 20px;">Working</button>
 		<ul class="dropdown-menu dropdown-menu-dark col-12" aria-labelledby="dropdownMenuYes">
@@ -66,7 +66,7 @@
 	</div>
 
 	<!-- NO BUTTON -->
-	<div class="d-grid gap-4 col-6 mx-auto dropdown">
+	<div class="d-grid gap-4 col-8 mx-auto dropdown">
 		<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuNo" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top: 25px;">Not Working</button>
 		<ul class="dropdown-menu dropdown-menu-dark col-12" aria-labelledby="dropdownMenuNo">
 			<li>
@@ -88,7 +88,7 @@
 	</div>
 
 	<!-- DEAD BUTTON -->
-	<div class="d-grid gap-4 col-6 mx-auto">
+	<div class="d-grid gap-4 col-8 mx-auto">
 		<button class="btn btn-outline-secondary
 	" style="margin-top: 25px;" on:click={()=>findId(id,'Dead')}>Dead</button>
 	</div>
