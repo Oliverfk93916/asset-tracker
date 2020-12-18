@@ -27,8 +27,8 @@
 	<a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">HTC Vive Pro Controller</a>
 </p>
 <div class="row">
-	<div class="col">
-    	<div class="collapse multi-collapse" id="multiCollapseExample1" style="width: 90%; margin-left: 5%">
+	<div class="col-8 mx-auto">
+    	<div class="collapse multi-collapse" id="multiCollapseExample1">
     		<div class="input-group mb-3">
 		 		<span class="input-group-text" style="width: 65%; background: rgb(26,26,26); color: rgb(200,200,200);">Motherboard</span>
 	  			<input type="number" class="form-control" style="background: rgb(200,200,200);"  required>
@@ -42,7 +42,7 @@
 	  			<input type="number" class="form-control" style="background: rgb(200,200,200)" required>
 	  		</div>
 			<div class="d-grid gap-4 col-6 mx-auto">
-    			<button style="margin-bottom: 20px;"class="btn btn-dark" type="submit">Submit form</button>
+    			<button data-bs-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1"style="margin-bottom: 20px;"class="btn btn-dark" type="submit">Submit form</button>
    			</div>
     	</div>
   	</div>
