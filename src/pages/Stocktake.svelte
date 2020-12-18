@@ -51,7 +51,7 @@
 				postStocktake(type,obj.controller)
 				success = 1
 				setTimeout(()=> success = 0, 1500)
-				// setTimeout(()=>location.reload(true),1500)
+				setTimeout(()=> location.reload(true),1500)
 			} else {
 				active = 1
 				setTimeout(()=> active = 0, 1500)
@@ -63,7 +63,7 @@
 				postStocktake(type,obj.headset)
 				success = 1
 				setTimeout(()=> success = 0, 1500)
-				// setTimeout(()=>location.reload(true),1500)
+				setTimeout(()=>location.reload(true),1500)
 			} else {
 				active = 1
 				setTimeout(()=> active = 0, 1500)
@@ -90,7 +90,7 @@
 <!-- SUCCESS -->
 	  	<div class="toast-container position-absolute p-3">
 	  			<div class="toast d-flex align-items-center text-white border-0" role="alert" aria-live="assertive" aria-atomic="true" style="opacity:{success}; background: rgb(231,95,133);">
-				<div class="toast-body">Success!</div>
+				<div class="toast-body">Thank you for submittting!</div>
 	  			<button type="button" class="btn-close btn-close-white ms-auto me-2" data-bs-dismiss="toast" aria-label="Close" on:click={closeToast}></button>
 	  		</div>
 
