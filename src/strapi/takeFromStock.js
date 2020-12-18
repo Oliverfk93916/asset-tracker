@@ -27,7 +27,7 @@ export async function takeFromStock(items,asset){
 		}
 		findId(asset,'Yes')
 		} 
-	 // navigate(`/${asset}`)
+	  navigate(`/${asset}`)
 	}
 }
 
