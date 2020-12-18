@@ -26,9 +26,9 @@
 <p style="margin-top: 20px;" class="d-grid gap-4 col-8 mx-auto" >
 	<a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">HTC Vive Pro Controller</a>
 </p>
-<div class="row ">
+<div class="row">
 	<div class="col">
-    	<div class="collapse multi-collapse" id="multiCollapseExample1">
+    	<div class="collapse multi-collapse" id="multiCollapseExample1" style="width: 90%; margin-left: 5%">
     		<div class="input-group mb-3">
 		 		<span class="input-group-text" style="width: 75%">Motherboard</span>
 	  			<input type="number" class="form-control" required>
