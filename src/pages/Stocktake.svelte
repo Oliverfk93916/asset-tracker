@@ -30,16 +30,16 @@
 	<div class="col">
     	<div class="collapse multi-collapse" id="multiCollapseExample1" style="width: 90%; margin-left: 5%">
     		<div class="input-group mb-3">
-		 		<span class="input-group-text" style="width: 75%">Motherboard</span>
-	  			<input type="number" class="form-control" required>
+		 		<span class="input-group-text" style="width: 65%; background: rgb(26,26,26); color: rgb(200,200,200);">Motherboard</span>
+	  			<input type="number" class="form-control" style="background: rgb(200,200,200);"  required>
 	  		</div>
 	  		<div class="input-group mb-3">
-		 		<span class="input-group-text" style="width: 75%">On Button</span>
-	  			<input type="number" class="form-control" required>
+		 		<span class="input-group-text" style="width: 65%; background: rgb(26,26,26); color: rgb(200,200,200);">On Button</span>
+	  			<input type="number" class="form-control" style="background: rgb(200,200,200)" required>
 	  		</div>
 	  		<div class="input-group mb-3">
-		 		<span class="input-group-text" style="width: 75%">Trigger</span>
-	  			<input type="number" class="form-control" required>
+		 		<span class="input-group-text" style="width: 65%; background: rgb(26,26,26); color: rgb(200,200,200);">Trigger</span>
+	  			<input type="number" class="form-control" style="background: rgb(200,200,200)" required>
 	  		</div>
 			<div class="d-grid gap-4 col-6 mx-auto">
     			<button style="margin-bottom: 20px;"class="btn btn-dark" type="submit">Submit form</button>
