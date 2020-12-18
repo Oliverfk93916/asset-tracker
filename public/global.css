@@ -263,11 +263,33 @@ p {
 }
 
 .stocktakeSubmit {
-  margin-bottom: 20px; 
+  margin-bottom: 50px; 
   border:1px solid rgb(231,95,133);
   color: rgb(200,200,200);
 }
 
+.partsContainer {
+  background: transparent; 
+  color: rgb(150,155,161);
+  border: 1px solid rgb(37.5,39,46.5);
+  border-radius: 5px; 
+  margin-bottom:2px;
+}
+
+.homeTable {
+  color: rgb(200,200,200); 
+  width: 98%; 
+  margin-left: 1%; 
+  border: 1px solid rgb(231,95,133);
+}
+
+.stripListItem {
+  background: transparent; 
+  color: rgb(150,155,161); 
+  border: 1px solid rgb(37.5,39,46.5);
+  border-radius: 5px; 
+  margin-bottom:2px;
+}
 
 
 

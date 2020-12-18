@@ -21,7 +21,9 @@
 	})
 
 	$: part = $parts.filter(item => item.type === takeParts(id.slice(0,3)))
+
 	let replace = []
+
 </script>
 <Navbar id="{id}" />
 <h1>What did you replace?</h1>
@@ -29,7 +31,7 @@
 <div class="d-grid gap-4 col-6 mx-auto" style="margin-bottom: 15px;">
 	<div class="list-group">
 		{#each part as item, i}
-			<label class="list-group-item list-group-item-dark" style="background: transparent; color: rgb(150,155,161);border: 1px solid rgb(37.5,39,46.5);border-radius: 5px; margin-bottom:2px;">
+			<label class="list-group-item list-group-item-dark partsContainer">
    			<input id={`chk${i}`} type="checkbox" bind:group={replace} value={item.part}> {item.part}
 			</label>
 		{/each}

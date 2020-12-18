@@ -82,7 +82,7 @@
 	<div class="d-grid gap-4 col-6 mx-auto">
 		<div aria-live="polite" aria-atomic="true" class="position-relative">
 			<div class="toast-container position-absolute p-3">
-				<div class="toast d-flex align-items-center text-white bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true" style="opacity:{active}">
+				<div class="toast d-flex align-items-center text-white border-0" role="alert" aria-live="assertive" aria-atomic="true" style="opacity:{active}; background: rgb(231,95,133);">
 					<div class="toast-body">Copied to clipboard</div>
 		  			<button type="button" class="btn-close btn-close-white ms-auto me-2" data-bs-dismiss="toast" aria-label="Close" on:click={closeToast}></button>
 				</div>
