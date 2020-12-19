@@ -12,14 +12,14 @@
 	let obj = {
 		'controller': {
 			'motherboard': null,
-			// 'onbutton': null,
-			// 'trackpad': null,
+			'onbutton': null,
+			'trackpad': null,
 			'trigger': null,
-			// 'topbutton': null,
-			// 'sidebutton': null,
-			// 'battery': null,
-			// 'topcover': null,
-			// 'bottomcover': null
+			'topbutton': null,
+			'sidebutton': null,
+			'battery': null,
+			'topcover': null,
+			'bottomcover': null
 		},
 		'headset': {
 			'motherboard': null,
@@ -47,12 +47,11 @@
 			let length = Object.values(obj.controller).length
 			let filteredLength = Object.values(obj.controller).filter(item => item != null).length
 			
-			// if (length === filteredLength){
-			if (2 === filteredLength) {
+			if (length === filteredLength){
 				postStocktake(type,obj.controller)
 				success = 1
 				setTimeout(()=> success = 0, 1500)
-				// setTimeout(()=> location.reload(true),1500)
+				setTimeout(()=> location.reload(true),1500)
 			} else {
 				active = 1
 				setTimeout(()=> active = 0, 1500)
@@ -116,15 +115,15 @@
 		 		<span class="input-group-text stocktakeSpan">Motherboard</span>
 	  			<input type="number" class="form-control stocktakeInput" bind:value={obj.controller.motherboard} required>
 	  		</div>
-<!-- 	  		<div class="input-group mb-3">
+	  		<div class="input-group mb-3">
 		 		<span class="input-group-text stocktakeSpan">On Button</span>
 	  			<input type="number" class="form-control stocktakeInput" bind:value={obj.controller.onbutton} required>
-	  		</div> -->
+	  		</div>
 	  		<div class="input-group mb-3">
 		 		<span class="input-group-text stocktakeSpan">Trigger</span>
 	  			<input type="number" class="form-control stocktakeInput" bind:value={obj.controller.trigger} required>
 	  		</div>
-	  		<!-- <div class="input-group mb-3">
+	  		<div class="input-group mb-3">
 		 		<span class="input-group-text stocktakeSpan">Bottom Cover</span>
 	  			<input type="number" class="form-control stocktakeInput" bind:value={obj.controller.bottomcover} required>
 	  		</div>
@@ -146,8 +145,8 @@
 	  		</div>
 	  		<div class="input-group mb-3">
 		 		<span class="input-group-text stocktakeSpan">Top Cover</span>
-	  			<input type="number" class="form-control stocktakeInput" bind:value={obj.controller.topcover} required> -->
-	  		<!-- </div> -->
+	  			<input type="number" class="form-control stocktakeInput" bind:value={obj.controller.topcover} required>
+	  		</div>
 	  	<!-- SUBMIT BUTTON -->
 			<div class="d-grid gap-4 col-6 mx-auto">
     			<button data-bs-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1" class="btn btn-dark stocktakeSubmit" type="submit" on:click|preventDefault={()=>handleSubmit('controller')}>Submit</button>

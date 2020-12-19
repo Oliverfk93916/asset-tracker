@@ -38,7 +38,12 @@ export async function generate(number, option){
 	
 	for (var x = 1; x <= number; x++){
 		let plusOne = (Number(maxIdObj.assetId.slice(-4)) + x)
-		assetId = option + '-' + ("000" + plusOne).slice(-4)
+
+		if (option === 'hds') {
+			assetId = option + 't-' + ("000" + plusOne).slice(-4)
+		} else {
+			assetId = option + '-' + ("000" + plusOne).slice(-4)
+		}
 
 		let item = {
 			dateIntroduced,
