@@ -29,10 +29,8 @@ export async function addToStock(items, asset){
 	if(change){
 		for (var x = 0; x < change.length; x++){
 			change[x].number += 1
-			const response = await axios.put(`${url}/parts/${change[x].id}`,change[x],{headers: {Authorization: `Bearer ${token}`,}})
-		.catch(error => console.log(error))
-		}
-
+			const response = await axios.put(`${url}/parts/${change[x].id}`,change[x],{headers: {Authorization: `Bearer ${token}`,}}).catch(error => console.log(error))
+		} 
 		// location.reload(true)
 	}
 	findId(asset,'Stripped')

@@ -1,5 +1,6 @@
 
 import url from './URL'
+import {navigate, link} from 'svelte-routing'
 
 function getStorageUser(){
 	return localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : {usernmae :null, jwt: null}
@@ -12,7 +13,7 @@ export default async() => {
 		Authorization: `Bearer ${token}`,}}).catch(error => console.error(error))
 	const assets = await response.json()
 	if(assets.error){
-		return null
+		navigate('/login')
 	}
 	return assets
 }
