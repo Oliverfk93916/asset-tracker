@@ -35,24 +35,3 @@ export async function addToStock(items, asset){
 	findId(asset,'Stripped')
 }
 }
-
-// Get quote from API
-
-async function getQuote(){
-    const proxyUrl = 'https://secret-xxxx-xxxx.herokuapp.com/';
-    const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
-    try {
-        const response = await fetch(proxyUrl + apiUrl);
-        const data = response.json();
-        console.log("data is " + data);
-    } catch(error){
-        // getQuote();
-        console.log('No quote', error);
-    }
- 
-}
-
-// On Load
-
-getQuote();
-
