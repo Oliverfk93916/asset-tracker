@@ -10,7 +10,7 @@ const globalStore = writable({
 
 const store = {
 	subscribe: globalStore.subscribe,
-	toggleItem: (item, value, alertText="default",alertDanger=false) => {
+	toggleItem: (item, value, alertText="default", alertDanger=false ) => {
 		globalStore.update(storeValues => {
 				return {...storeValues, [item]:value, alertText, alertDanger}
 			})

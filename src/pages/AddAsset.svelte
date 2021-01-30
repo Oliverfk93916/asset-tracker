@@ -79,6 +79,8 @@
 			</ul>
 		</div>
 	{/await}
+
+	<!-- TOAST -->
 	<div class="d-grid gap-4 col-6 mx-auto">
 		<div aria-live="polite" aria-atomic="true" class="position-relative">
 			<div class="toast-container position-absolute p-3">
